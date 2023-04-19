@@ -35,6 +35,7 @@ body {
     position: relative;
 }
 
+@import './animations.scss';
 @import './blocks/form';
 @import './blocks/button';
 @import './blocks/title';
