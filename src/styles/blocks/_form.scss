@@ -1,0 +1,18 @@
+@import '../../styles/animations.scss';
+
+.form {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 480px; // 400px
+    height: 480px; // 400px
+    background: rgba(194, 194, 194, 0.1);
+    border-radius: 5px;
+    border: 2px solid #e5a4ff;
+    color: #e5a4ff;
+    &_start-animation {
+        animation: appear 1s ease 1;
+    }
+    &-game {
+        border: none;
+    }
+}

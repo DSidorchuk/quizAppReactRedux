@@ -1,0 +1,45 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+* {
+    font-family: 'Electrolize', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+body {
+    background: url("../assets/bg.jpg") center / contain fixed;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@import './blocks/form';
+@import './blocks/button';
+@import './blocks/title';
+@import '../components/playersForm/playersForm.scss';
+@import '../components/conditionsForm/conditionForm.scss';
+@import '../components/playerName/playerName.scss';
+@import '../components/question/question.scss';
+@import './blocks/counter';
+@import '../components/twinGame/twinGame.scss';
+@import '../components/pages/scorePage/scorePage.scss';

@@ -1,0 +1,59 @@
+@keyframes appear {
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(100%);
+    }
+}
+
+@keyframes shift {
+    0% {
+        transform: translateX(-300%);
+    }
+    20% {
+        transform: translateX(-250%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-150%);
+    }
+    80% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes re-shift {
+    0% {
+        transform: translateX(300%);
+    }
+    20% {
+        transform: translateX(250%);
+    }
+    40% {
+        transform: translateX(200%);
+    }
+    60% {
+        transform: translateX(150%);
+    }
+    80% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}

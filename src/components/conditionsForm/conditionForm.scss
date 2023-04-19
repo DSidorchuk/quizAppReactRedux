@@ -1,0 +1,36 @@
+
+.condition-form {
+    &__subtitle {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 22px;
+    }
+    &__quest {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__num {
+        font-size: 20px;
+        cursor: pointer;
+        &_active {
+            border-bottom: 1px solid #e5a4ff;
+        }
+    }
+    &__diff {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__level {
+        font-size: 20px;
+        cursor: pointer;
+        &_active {
+            border-bottom: 1px solid #e5a4ff;
+        }
+    }
+    &__btn {
+        margin-top: 60px;
+        font-size: 28px;
+    }
+}

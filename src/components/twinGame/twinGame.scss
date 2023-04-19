@@ -1,0 +1,17 @@
+
+.first-player-selection {
+    padding: 100px 0;
+    &__title {
+        margin-top: 50px;
+    }
+    &__options {
+        margin-top: 20px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__name {
+        cursor: pointer;
+    }
+}

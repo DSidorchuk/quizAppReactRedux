@@ -1,0 +1,41 @@
+
+.quiz {
+    height: 400px;
+    padding-top: 20px;
+    &__cat {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 30px;
+        text-decoration: underline;
+    }
+    &__quest {
+        padding: 0 10px;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    &__options {
+        padding: 0 20px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: left;
+    }
+    &__answer {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        min-height: 50px;
+        font-size: 18px;
+        &_active {
+        text-transform: uppercase;
+        }
+        &_correct {
+            font-size: 18px;
+            text-shadow: 1px 1px 1px whitesmoke, 1px 1px 1px whitesmoke;
+        }
+    }
+}

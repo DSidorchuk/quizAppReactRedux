@@ -1,0 +1,39 @@
+@import "../../styles/animations.scss";
+
+.player-name {
+    min-width: 150px;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    color: #fec859;
+    text-shadow: 1px 1px 1px whitesmoke, 1px 1px 1px whitesmoke;
+    &_start {
+        position: absolute;
+        top: 50px;
+        left: 150px;
+    }
+    &_second {
+        color: #43b5a0;
+        &_start {
+            position: absolute;
+            top: 50px;
+            right: 150px;
+        }
+        &_game-animation {
+            animation: re-shift 2s ease 1;
+        }
+    }
+    &_start-animation {
+        animation: scale 2s ease 1;
+    }
+    &_game {
+        position: absolute;
+        top: -90px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &_game-animation {
+        animation: shift 2s ease 1;
+    }
+}
+

@@ -1,0 +1,50 @@
+
+.players-form {
+    &__qtty {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__num {
+        font-size: 24px;
+        font-weight: 700;
+        cursor: pointer;
+        &_active {
+            border-bottom: 1px solid #e5a4ff;
+        }
+    }
+    &__names {
+        margin-top: 30px;
+        display: flex;
+        height: 270px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    &__player {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 700;
+        label {
+            color: #fec859;
+            text-shadow: 1px 1px 1px whitesmoke, 1px 1px 1px whitesmoke;
+        }
+        input {
+            padding-left: 10px;
+            width: 200px;
+            border: none;
+            background: rgba(194, 194, 194, 0.1);
+            border-radius: 5px;
+            font-size: 18px;
+            color: #e5a4ff;
+        }
+        &:nth-child(2) {
+            label {
+                color: #43b5a0;
+            }
+        }
+    }
+}
