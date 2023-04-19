@@ -1,17 +1,16 @@
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 
-import './timer.scss';
 import 'react-circular-progressbar/dist/styles.css';
 import { useEffect, useState } from 'react';
 
 
-const Timer = ({timeEnd}) => {
+const Timer = ({timeEnd, maxTime}) => {
     
     const [time, setTime] = useState(0);
 
     useEffect(() => {
         const timer = setInterval(() => {
-            if (time < 20) {
+            if (time < maxTime) {
                 setTime(time => time + 1);
             } else {
                 timeEnd();
@@ -20,11 +19,12 @@ const Timer = ({timeEnd}) => {
         return () => {clearInterval(timer)}
     }, [time])
 
+    
     return (
         <div className="timer">
             <CircularProgressbar 
                         value={time} 
-                        maxValue={30}
+                        maxValue={maxTime}
                         strokeWidth={0.3}
                         styles={buildStyles({
                             pathTransitionDuration: 1,

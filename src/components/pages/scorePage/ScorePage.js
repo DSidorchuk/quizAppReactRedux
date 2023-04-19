@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import PlayerName from '../../playerName/PlayerName';
 import { oneMoreGame } from "../../../reducers";
 
-import '../../../styles/style.scss';
 
 const ScorePage = () => {
 
     const {player1, player2, games} = useSelector(state => state);
     const numOfQuestions = useSelector(state => state.conditions.num);
     const dispatch = useDispatch();
+
     const arr = [player1, player2];
 
     const content = arr.map((player, index) => {
@@ -32,6 +32,7 @@ const ScorePage = () => {
         }
     })
 
+    
     return (
         <div className="scores">
             {content}

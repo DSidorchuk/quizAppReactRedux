@@ -8,6 +8,7 @@ import PlayerName from "../../playerName/PlayerName";
 const StartPage = () => {
 
     const {player1, player2} = useSelector(state => state);
+    
     const classArr = ["player-name player-name_start-animation player-name_start",
                       "player-name player-name_start-animation player-name_second player-name_second_start"];
 
@@ -18,6 +19,7 @@ const StartPage = () => {
     const playerName2 = player2 
                         ? <PlayerName classes={classArr[1]} {...player2}/>
                         : null;
+
 
     return (
         <div className="container">

@@ -16,15 +16,15 @@
     &__names {
         margin-top: 30px;
         display: flex;
-        height: 270px;
         flex-direction: column;
         justify-content: space-around;
+        height: 270px;
     }
     &__player {
         margin-top: 10px;
         display: flex;
-        justify-content: space-around;
         flex-wrap: wrap;
+        justify-content: space-around;
         align-items: center;
         font-size: 20px;
         font-weight: 700;
@@ -36,10 +36,9 @@
             padding-left: 10px;
             width: 200px;
             border: none;
-            background: rgba(194, 194, 194, 0.1);
             border-radius: 5px;
+            background: rgba(194, 194, 194, 0.1);
             font-size: 18px;
-            color: #e5a4ff;
         }
         &:nth-child(2) {
             label {

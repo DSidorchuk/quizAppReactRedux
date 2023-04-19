@@ -3,8 +3,8 @@ import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from "react-redux";
 
-import "../../styles/style.scss";
 import { createPlayer1, createPlayer2 } from "../../reducers";
+
 
 const PlayersForm = () => {
 
@@ -32,6 +32,7 @@ const PlayersForm = () => {
         }
     }
 
+    
     return (
         <div className="players-form form form_start-animation">
                 <h3 className="players-form__title title">How much players?</h3>

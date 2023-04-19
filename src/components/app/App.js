@@ -1,11 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from "react";
 
-import StartPage from "../pages/startPage/StartPage";
-import GamePage from "../pages/gamePage/GamePage";
-import ScorePage from "../pages/scorePage/ScorePage";
-import { Suspense } from "react";
+const StartPage = lazy(() => import("../pages/startPage/StartPage"));
+const GamePage = lazy(() => import("../pages/gamePage/GamePage"));
+const ScorePage = lazy(() => import("../pages/scorePage/ScorePage"));
 
 function App() {
+
+  
   return (
     <BrowserRouter>
       <div className="App">

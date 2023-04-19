@@ -1,6 +1,5 @@
-
 import { useMemo } from 'react';
-import '../../styles/style.scss';
+
 
 const Question = ({questionObj, selectAnswer, choosenAnswer, timeOver}) => {
 
@@ -30,6 +29,7 @@ const Question = ({questionObj, selectAnswer, choosenAnswer, timeOver}) => {
         )
     })
 
+    
     return (
         <div className="quiz">
             <h4 className="quiz__cat">{category}</h4>

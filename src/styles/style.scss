@@ -1,8 +1,10 @@
 @import 'libs/bootstrap-reboot.min';
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import './base/variables.scss';
 
 * {
     font-family: 'Electrolize', sans-serif;
+    color: $main-color;
 }
 
 a {
@@ -39,7 +41,9 @@ body {
 @import '../components/playersForm/playersForm.scss';
 @import '../components/conditionsForm/conditionForm.scss';
 @import '../components/playerName/playerName.scss';
+@import '../components/timer/timer.scss';
 @import '../components/question/question.scss';
 @import './blocks/counter';
 @import '../components/twinGame/twinGame.scss';
 @import '../components/pages/scorePage/scorePage.scss';
+@import '../components/error/error.scss';

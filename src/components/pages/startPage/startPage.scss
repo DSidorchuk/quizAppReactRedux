@@ -1,19 +1,18 @@
-@import "../../../styles/animations.scss";
 
 .player-name {
-    min-width: 150px;
     position: absolute;
     top: 50px;
     left: 0;
+    min-width: 150px;
+    color: #fec859;
     font-size: 25px;
     font-weight: 700;
     text-align: start;
-    color: #fec859;
     text-shadow: 1px 1px 1px whitesmoke, 1px 1px 1px whitesmoke;
     animation: scale 2s ease 1;
     &_second {
         left: calc(100% - 150px);
-        text-align: end;
         color: #43b5a0;
+        text-align: end;
     }
 }

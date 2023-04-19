@@ -1,36 +1,27 @@
 
 .condition-form {
+    &__title {
+        margin-top: 25px;
+    }
     &__subtitle {
-        margin-top: 40px;
-        text-align: center;
+        margin-top: 30px;
         font-size: 22px;
+        text-align: center;
     }
-    &__quest {
+    &__block {
         margin-top: 20px;
         display: flex;
         justify-content: space-around;
-    }
-    &__num {
-        font-size: 20px;
-        cursor: pointer;
-        &_active {
-            border-bottom: 1px solid #e5a4ff;
-        }
-    }
-    &__diff {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-around;
-    }
-    &__level {
-        font-size: 20px;
-        cursor: pointer;
-        &_active {
-            border-bottom: 1px solid #e5a4ff;
+        &-item {
+            font-size: 20px;
+            cursor: pointer;
+            &_active {
+                border-bottom: 1px solid $main-color;
+            }
         }
     }
     &__btn {
-        margin-top: 60px;
+        margin-top: 30px;
         font-size: 28px;
     }
 }

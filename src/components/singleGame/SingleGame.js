@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { rightAnswer1 } from "../../reducers";
 import PlayerName from "../playerName/PlayerName";
 import Game from "../game/Game";
-import '../../styles/style.scss';
+
 
 const SingleGame = () => {
     const [gameOver, setGameOver] = useState(false);
@@ -32,6 +32,7 @@ const SingleGame = () => {
     
     const content = gameOver ? scoresLink : game;
 
+    
     return (
         <div className="form form-game">
             {content}
