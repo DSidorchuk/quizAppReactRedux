@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Helmet } from 'react-helmet';
 
 import {setQuestionsList, questLoading, questLoadingError} from '../../../reducers';
 import { useHttp } from "../../../hooks/http.hook";
@@ -7,11 +8,12 @@ import Spinner from "../../spinner/Spinner";
 import Error from "../../error/Error";
 import SingleGame from "../../singleGame/SingleGame";
 import TwinGame from "../../twinGame/TwinGame";
+import NoPlayer from "../../noPlayer/NoPlayer";
 
 const GamePage = () => {
 
     const {num, diff} = useSelector(state => state.conditions);
-    const {player2, questions} = useSelector(state => state);
+    const {player1, player2, questions} = useSelector(state => state);
     const loadingStatus = useSelector(state => state.loadingStatus);
     const dispatch = useDispatch();
 
@@ -30,17 +32,30 @@ const GamePage = () => {
         // eslint-disable-next-line 
     }, []);
 
-    const spinner = loadingStatus === 'loading' ? <Spinner/> : null;
-    const error = loadingStatus === 'error' ? <Error/> : null;
-    const gameMode = player2 ? <TwinGame/> : <SingleGame/>;
-    const quiz = questions ? gameMode : null;
+    const createContent = () => {
+        if(player1) {
+            const spinner = loadingStatus === 'loading' ? <Spinner/> : null;
+            const error = loadingStatus === 'error' ? <Error/> : null;
+            const gameMode = player2 ? <TwinGame/> : <SingleGame/>;
+            const quiz = questions && !spinner  ? gameMode : null;
+            return [spinner, error, quiz]
+        } else {
+            return <NoPlayer/>
+        }
+    };
+
+    const content = createContent();
 
     
     return (
         <div className="container">
-           {spinner}
-           {error}
-           {quiz}
+            <Helmet>
+                <meta
+                    name="description"
+                    content="Game page of QUIZ!"/>
+                <title>GAME</title>
+            </Helmet>
+           {content}
         </div>
     )
 }

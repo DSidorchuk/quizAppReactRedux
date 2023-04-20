@@ -10,6 +10,8 @@ const Question = ({questionObj, selectAnswer, choosenAnswer, timeOver}) => {
         let questArr = [correctAnswer, ...incorrectAnswers];
         questArr.sort(() => Math.random() -0.5);
         return questArr;
+
+        // eslint-disable-next-line
     },[question]);
 
     const answers = getQuestions.map((elem, index) => {

@@ -17,6 +17,8 @@ const Timer = ({timeEnd, maxTime}) => {
             }
         }, 1000);
         return () => {clearInterval(timer)}
+
+        // eslint-disable-next-line
     }, [time])
 
     

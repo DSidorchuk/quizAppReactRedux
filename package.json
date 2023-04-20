@@ -12,6 +12,7 @@
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.2.0",
     "react-redux": "^7.2.3",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.8",

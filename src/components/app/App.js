@@ -4,6 +4,8 @@ import { Suspense, lazy } from "react";
 const StartPage = lazy(() => import("../pages/startPage/StartPage"));
 const GamePage = lazy(() => import("../pages/gamePage/GamePage"));
 const ScorePage = lazy(() => import("../pages/scorePage/ScorePage"));
+const Page404 = lazy(() => import("../pages/page404/Page404"));
+const Spinner = lazy(() => import('../spinner/Spinner'));
 
 function App() {
 
@@ -11,11 +13,12 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Suspense fallback="div">
+        <Suspense fallback={<Spinner/>}>
           <Routes>
             <Route path="/" element={<StartPage/>}/>
             <Route path="/game" element={<GamePage/>}/>
             <Route path="/scores" element={<ScorePage/>}/>
+            <Route path="*" element={<Page404/>}/>
           </Routes>
         </Suspense>
       </div>

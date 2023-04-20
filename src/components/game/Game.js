@@ -22,6 +22,8 @@ const Game = ({player, endGame, questions, setRightAnswer}) => {
         if(lastQuestion) {
             endGame();
         }
+        
+        // eslint-disable-next-line
     }, [counter]);
 
     const clickNext = () => {

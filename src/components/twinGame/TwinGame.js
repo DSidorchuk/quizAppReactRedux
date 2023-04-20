@@ -50,6 +50,7 @@ const TwinGame = () => {
         if(player) {
             player.name === player1.name ? selectPlayer(player2.name) : selectPlayer(player1.name);
         }
+        // eslint-disable-next-line
     }, [nextRound]);
 
 

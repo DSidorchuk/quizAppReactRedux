@@ -1,0 +1,16 @@
+
+.page404 {
+    margin: 0 auto;
+    margin-top: 420px;
+    &__link {
+        margin-top: 40px;
+        display: block;
+        color: $main-color;
+        font-size: 20px;
+        text-align: center;
+        &:hover {
+            color: $main-color;
+            font-weight: 700;
+        }
+    }
+}

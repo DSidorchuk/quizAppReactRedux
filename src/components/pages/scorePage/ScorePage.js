@@ -1,7 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 import PlayerName from '../../playerName/PlayerName';
+import NoPlayer from "../../noPlayer/NoPlayer";
 import { oneMoreGame } from "../../../reducers";
 
 
@@ -13,7 +15,7 @@ const ScorePage = () => {
 
     const arr = [player1, player2];
 
-    const content = arr.map((player, index) => {
+    const score = arr.map((player, index) => {
         if(player) {
             const clazz = index=== 0 ? 'player-name' : 'player-name player-name_second';
             const correct = player.right ? player.right : 0;
@@ -29,17 +31,41 @@ const ScorePage = () => {
                     </div>
                 </div>
             )
+        } else {
+            return null;
         }
-    })
+    });
+
+    const createContent = () => {
+        if(player1) {
+            return (
+                <>
+                    {score}
+                    <Link to="/game">
+                        <button className="button" 
+                                onClick={() => dispatch(oneMoreGame())}>ONE MORE TIME?</button>
+                    </Link>
+                </>
+            )
+        } else {
+            return <NoPlayer/>
+        }
+    }
+
+    const content = createContent();
 
     
     return (
-        <div className="scores">
-            {content}
-            <Link to="/game">
-                <button className="button" onClick={() => dispatch(oneMoreGame())}>ONE MORE TIME?</button>
-            </Link>
-
+        <div className="container">
+            <div className="scores">
+                <Helmet>
+                    <meta
+                        name="description"
+                        content="Scores of QUIZ!"/>
+                    <title>GAME SCORE</title>
+                </Helmet>
+                {content}
+            </div>
         </div>
     )
 }

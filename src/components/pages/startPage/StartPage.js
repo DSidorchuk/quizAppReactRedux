@@ -1,4 +1,5 @@
 import { useSelector} from "react-redux";
+import { Helmet } from 'react-helmet';
 
 import PlayersForm from "../../playersForm/PlayersForm";
 import ConditionForm from "../../conditionsForm/ConditionForm";
@@ -23,6 +24,12 @@ const StartPage = () => {
 
     return (
         <div className="container">
+            <Helmet>
+                <meta
+                    name="description"
+                    content="Start page for players to start QUIZ!"/>
+                <title>QUIZ</title>
+            </Helmet>
             {playerName1}
             {playerName2}
             { !player1 ? <PlayersForm/> : <ConditionForm/>}     

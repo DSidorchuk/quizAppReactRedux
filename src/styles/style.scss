@@ -26,7 +26,7 @@ ul {
 }
 
 body {
-    background: url("../assets/bg.jpg") center / contain fixed;
+    background: url("../assets/bg2.jpg") center / contain fixed;
 }
 
 .container {
@@ -48,3 +48,5 @@ body {
 @import '../components/twinGame/twinGame.scss';
 @import '../components/pages/scorePage/scorePage.scss';
 @import '../components/error/error.scss';
+@import '../components/pages/page404/page404.scss';
+@import '../components/noPlayer/noPlayer.scss';
