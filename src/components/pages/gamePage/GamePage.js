@@ -10,6 +10,7 @@ import SingleGame from "../../singleGame/SingleGame";
 import TwinGame from "../../twinGame/TwinGame";
 import NoPlayer from "../../noPlayer/NoPlayer";
 
+
 const GamePage = () => {
 
     const {num, diff} = useSelector(state => state.conditions);

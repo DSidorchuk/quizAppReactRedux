@@ -1,12 +1,13 @@
 import { useMemo } from 'react';
 
 
+
 const Question = ({questionObj, selectAnswer, choosenAnswer, timeOver}) => {
 
     const {category, question, correctAnswer, incorrectAnswers} = questionObj;
 
     // Concat answers in one array and mix them
-    const getQuestions = useMemo(() => {
+    const getAnswers = useMemo(() => {
         let questArr = [correctAnswer, ...incorrectAnswers];
         questArr.sort(() => Math.random() -0.5);
         return questArr;
@@ -14,7 +15,7 @@ const Question = ({questionObj, selectAnswer, choosenAnswer, timeOver}) => {
         // eslint-disable-next-line
     },[question]);
 
-    const answers = getQuestions.map((elem, index) => {
+    const answers = getAnswers.map((elem, index) => {
         let clazz = elem === choosenAnswer
                             ? "quiz__answer quiz__answer_active"
                             : "quiz__answer";

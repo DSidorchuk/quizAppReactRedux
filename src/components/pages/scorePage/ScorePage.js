@@ -65,6 +65,11 @@ const ScorePage = () => {
                     <title>GAME SCORE</title>
                 </Helmet>
                 {content}
+                <div className="scores__thanks">
+                    Much thanks to team of 
+                    <br/><b> <a href="https://the-trivia-api.com">THE TREVIA API</a></b><br/>  
+                    for questions and their great API
+                </div>
             </div>
         </div>
     )
